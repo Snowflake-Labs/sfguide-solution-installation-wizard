@@ -20,9 +20,9 @@ Please see TAGGING.md for details on object comments.
 
 ## Provider Directions
 -- Initial Setup --
-1. Run 1-sol_inst_wzd__provider_setup.sql
+1. Run 1-sol_inst_wzd_provider_setup.sql
 2. Load your own scripts and consumer-specific placeholders -- OR -- run 2-demo_configuration.sql to load sample configurations
-3. Run 3-sol_inst_wzd__package_setup.sql
+3. Run 3-sol_inst_wzd_package_setup.sql
 
 **Note** Step 3 automatically installs the app locally, so you can test it within the provider account
 
