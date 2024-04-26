@@ -28,11 +28,11 @@ Please see TAGGING.md for details on object comments.
 
 ## Customization Options
 **Custom Placeholders (Optional)**
-If you need the scripts to dynamically swap out text based on which consumer is using the app, you can add placeholders to *scad_package.admin.placeholder_definition*.
+If you need the scripts to dynamically swap out text based on which consumer is using the app, you can add placeholders to *sol_inst_wzd_package.admin.placeholder_definition*.
 To do so, you insert the consumer organization, consumer account name, placeholder text (the string to find), and the replacement value (the text that replaces the found string)
 
 **Custom scripts**
-To load custom scripts, add them to *scad_package.admin.script*.
+To load custom scripts, add them to *sol_inst_wzd_package.admin.script*.
 To do so, you insert the script by including:
  - *workflow name* - what the collection of scripts deploy
  - *workflow description* - a human readable description of what the scripts deploy
