@@ -56,7 +56,7 @@ create or replace table sol_inst_wzd_deployment_db.code.script (
 );
 
 /* defaults to request create database, since that is the most common and powerful way to create apps in a consumer's account */
-insert into sol_inst_wzd_deployment_db.code.script (name , script) 
+insert into sol_inst_wzd_deployment_db.code.script (name , script)
 values ('MANIFEST_V1',
 $$
 manifest_version: 1 # required
@@ -79,16 +79,16 @@ $$)
 ;
 
 /* readme for the app, accessible to the consumer */
-insert into sol_inst_wzd_deployment_db.code.script (name , script) 
+insert into sol_inst_wzd_deployment_db.code.script (name , script)
 values ( 'README_V1',$$
 # Solution Installation Wizard
-      
+
 The Solution Installation Wizard app is designed to allow a consumer to deploy provider-defined solutions into their environment, typically including a share back to the original provider/super consumer.
 
 $$);
 
 /* add environment file for streamlit - includes all references to libraries that the Streamlit needs */
-insert into sol_inst_wzd_deployment_db.code.script (name , script) 
+insert into sol_inst_wzd_deployment_db.code.script (name , script)
 values ( 'ENVIRONMENT_V1',$$
 name: sf_env
 channels:
@@ -555,12 +555,12 @@ create or replace secure view app_shared.placeholder_definition comment='{"origi
 
 /* Create script table */
 create or replace table app_shared.script(
-    workflow_name string, 
-    workflow_description string, 
-    script_name string, 
-    script_order string, 
-    is_autorun boolean, 
-    is_autorun_code_visible boolean, 
+    workflow_name string,
+    workflow_description string,
+    script_name string,
+    script_order string,
+    is_autorun boolean,
+    is_autorun_code_visible boolean,
     script_description string,
     script_text varchar(16777216)
 ) comment='{"origin":"sf_sit","name":"scad","version":{"major":1, "minor":0},"attributes":{"component":"scad"}}';
@@ -606,7 +606,7 @@ alter application package sol_inst_wzd_package
 alter application package sol_inst_wzd_package
   set default release directive
   version = Version1
-  patch = 0; 
+  patch = 0;
 
 /* test creating the app locally */
 drop application if exists solution_installation_wizard_app cascade;

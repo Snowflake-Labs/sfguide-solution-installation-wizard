@@ -87,7 +87,7 @@ select
     ,   false as is_autorun
     ,   true as is_autorun_code_visible
     ,   'Deploys a consumer-owned Streamlit' as script_description
-    ,   
+    ,
 (select REGEXP_REPLACE($$
 use role accountadmin;
 
@@ -95,7 +95,7 @@ create warehouse if not exists xs_wh;
 
 create or replace database streamlit_deploy_demo_db;
 create or replace schema streamlit_deploy_demo_db.streamlit;
-drop schema streamlit_deploy_demo_db.public; 
+drop schema streamlit_deploy_demo_db.public;
 create or replace stage streamlit_deploy_demo_db.streamlit.streamlit_stage;
 
 create or replace schema streamlit_deploy_demo_db.code;
@@ -127,7 +127,7 @@ create or replace table streamlit_deploy_demo_db.code.script (
 );
 
 /* streamlit */
-insert into streamlit_deploy_demo_db.code.script (name , script) 
+insert into streamlit_deploy_demo_db.code.script (name , script)
 values ( 'STREAMLIT_V1',:::
 # Import python packages
 import streamlit as st
@@ -183,6 +183,6 @@ call streamlit_deploy_demo_db.code.put_to_stage('streamlit_deploy_demo_db.stream
 create or replace streamlit streamlit_deploy_demo_db.streamlit.streamlit_demo
   root_location = '@streamlit_deploy_demo_db.streamlit.streamlit_stage'
   main_file = '/streamlit_ui.py'
-  query_warehouse = xs_wh; 
+  query_warehouse = xs_wh;
 $$,':::','$$')) as script_text
 ;
