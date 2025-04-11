@@ -1,13 +1,24 @@
 # Solution Installation Wizard
+
+<a href="https://emerging-solutions-toolbox.streamlit.app/">
+    <img src="https://github.com/user-attachments/assets/aa206d11-1d86-4f32-8a6d-49fe9715b098" alt="image" width="150" align="right";">
+</a>
+
 The Solution Installation Wizard facilitates the deployment of code products (native apps, Streamlits, and more) securely and safely into consumer environments with full consumer consent.  It is currently designed to be used by known consumers.
 
-All sample code is provided for reference purposes only. Please note that this code is provided “AS IS” and without warranty.  Snowflake will not offer any support for use of the sample code.
+## Support Notice
+
+All sample code is provided for reference purposes only. Please note that this code is
+provided `as is` and without warranty. Snowflake will not offer any support for the use
+of the sample code. The purpose of the code is to provide customers with easy access to
+innovative ideas that have been built to accelerate customers' adoption of key
+Snowflake features. We certainly look for customers' feedback on these solutions and
+will be updating features, fixing bugs, and releasing new solutions on a regular basis.
 
 Copyright (c) 2025 Snowflake Inc. All Rights Reserved.
 
-Please see TAGGING.md for details on object comments.
-
 ## Definitions
+
 **Provider** - The entity providing the Solution Installation Wizard app
 
 **Consumer** - The entity installing and using the Solution Installation Wizard to create Apps, most likely to share back to the provider
@@ -19,6 +30,7 @@ Please see TAGGING.md for details on object comments.
 **Workflow** - A set of SQL scripts, useful for adding a menu of solutions to the app.
 
 ## Provider Directions
+
 -- Initial Setup --
 1. Run 1-sol_inst_wzd_provider_setup.sql
 2. Load your own scripts and consumer-specific placeholders -- OR -- run 2-demo_configuration.sql to load sample configurations
@@ -27,6 +39,7 @@ Please see TAGGING.md for details on object comments.
 **Note** Step 3 automatically installs the app locally, so you can test it within the provider account
 
 ## Customization Options
+
 **Custom Placeholders (Optional)**
 If you need the scripts to dynamically swap out text based on which consumer is using the app, you can add placeholders to *sol_inst_wzd_package.admin.placeholder_definition*.
 To do so, you insert the consumer organization, consumer account name, placeholder text (the string to find), and the replacement value (the text that replaces the found string)
@@ -55,6 +68,11 @@ The native app readme can be changed in 3-sol_inst_wzd__package_setup.
 When listing the app, you can call the app whatever fits your use case, it does not have to match the package name.
 
 ## Consumer Directions
+
 1. Install the App Deployer from the listing
 2. Open the app in Snowsight via the sidebar - Data Products -> Apps (this should automatically open the Streamlit)
 3. Follow the on-screen directions in the Streamlit to select and deploy code
+
+## Tagging
+
+Please see `TAGGING.md` for details on object comments.
